@@ -1,0 +1,52 @@
+Componentes:
+    Home:
+        2 Botones:
+            Lista Participantes
+            Lista Paises
+    
+    Footer
+
+    Lista de paises
+        //posición_equipo
+        pais
+        Medallas
+          Oro
+          Plata
+          Bronze
+        total de medallas
+
+
+    Lista de participantes:
+        Nombre
+        Apellido
+        Edad
+        Pais
+        Disciplinas
+        Medallas:
+            Oro
+            Plata
+            Bronze
+        Total Medallas
+        
+    Formulario para agregar:
+        Paises
+        Medallas 
+        Participantes 
+        Disciplinas 
+        Eventos
+
+Carpetas:
+    Formularios/
+        Paises/
+        Medallas/ 
+        Participantes/ 
+        Disciplinas/ 
+        Eventos/
+    Home/
+    Footer/
+    Listas/
+        Lista_Participantes/
+        Lista_Paises/
+            
+
+componetn generate Formulario/nombre_componenete
