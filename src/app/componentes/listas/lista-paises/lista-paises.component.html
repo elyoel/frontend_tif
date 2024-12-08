@@ -1,1 +1,26 @@
-<p>lista-paises works!</p>
+<div class="table-responsive mb-5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Region</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="paises.length; else emptyMessage">
+          <tr *ngFor="let expense of paises">
+            <td>{{ expense.id }}</td>
+            <td>{{ expense.nombre_de_pais }}</td>
+            <td>{{ expense.region }}</td>
+           </tr>
+        </ng-container>
+        <ng-template #emptyMessage>
+          <tr>
+            <td colspan="6">No hay datos para mostrar</td>
+          </tr>
+        </ng-template>
+      </tbody>
+    </table>
+  </div>
+  

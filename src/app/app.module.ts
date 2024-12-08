@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { AppComponent } from './app.component';
 import { PaisesComponent } from './componentes/formulario/paises/paises.component';
 import { MedallasComponent } from './componentes/formulario/medallas/medallas.component';
@@ -28,7 +30,8 @@ import { ListaParticipantesComponent } from './componentes/listas/lista-particip
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
