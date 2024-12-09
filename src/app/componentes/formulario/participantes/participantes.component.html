@@ -1,1 +1,57 @@
-<p>participantes works!</p>
+<div class="container">
+    <div class="d-flex align-items-center justify-content-between flex-wrap mt-5 mb-4 border-bottom">
+      <h2 class="section-title mb-4"> Cargar Nuevo Participante</h2>
+      <div class="d-flex gap-2 mb-3">
+        <a class="btn btn-outline-secondary" routerLink="/inicio/lista_paises">Cancelar</a>
+        <button type="button" class="btn btn-primary" (click)="guardarParticipante()">Guardar Participantes</button>
+      </div>
+    </div>
+    
+    <form class="mb-5"  [formGroup]="participanteForm" (ngSubmit)="guardarParticipante()">
+        <div class="mb-3">
+            <label for="typeInput" class="form-label">Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control" id="typeInput" placeholder="Nombren del Participante">
+        </div>
+
+        <div class="mb-3">
+            <label for="typeInput" class="form-label">Apellido</label>
+            <input type="text" formControlName="apellido" class="form-control" id="typeInput" placeholder="Apellido del Participante">
+        </div>
+        <div class="mb-3">
+            <label for="typeInput" class="form-label">Edad</label>
+            <input type="number" formControlName="edad" class="form-control" id="typeInput" placeholder="Edad del Participante">
+        </div>
+
+      <div class="mb-3">
+        <label for="amountInput" class="form-label">Participante asite al Evento</label>
+        <div class="input-group has-validation">
+            <select formControlName="id_eventos"  class="form-select" aria-label="Default select example">
+              <option selected>Selecciona una Opcion</option>
+              <option *ngFor="let evento of eventos" value="{{evento.id}}">{{evento.nombre_evento}}</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="amountInput" class="form-label">Pais del Participante</label>
+        <div class="input-group has-validation">
+            <select formControlName="id_pais"  class="form-select" aria-label="Default select example">
+              <option selected>Selecciona una Opcion</option>
+              <option *ngFor="let pais of paises" value="{{pais.id}}">{{pais.nombre_de_pais}}</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="amountInput" class="form-label">Disciplina del Participante</label>
+        <div class="input-group has-validation">
+            <select formControlName="id_disciplinas"  class="form-select" aria-label="Default select example">
+              <option selected>Selecciona una Opcion</option>
+              <option *ngFor="let disciplina of disciplinas" value="{{disciplina.id}}">{{disciplina.nombre_disciplinas}}</option>
+            </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Guardar Participante</button>
+    </form>
+  </div>

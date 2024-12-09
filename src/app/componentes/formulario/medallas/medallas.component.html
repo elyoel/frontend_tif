@@ -1,1 +1,32 @@
-<p>medallas works!</p>
+<div class="container">
+    <div class="d-flex align-items-center justify-content-between flex-wrap mt-5 mb-4 border-bottom">
+      <h2 class="section-title mb-4"> Medallas </h2>
+      <div class="d-flex gap-2 mb-3">
+        <a class="btn btn-outline-secondary" routerLink="/inicio/lista_paises">Cancelar</a>
+        <button type="button" class="btn btn-primary" (click)="guardarMedalla()">Guardar Madalla</button>
+      </div>
+    </div>
+    
+    <form class="mb-5"  [formGroup]="medallaForm" (ngSubmit)="guardarMedalla()">
+      <div class="mb-3">
+        <label for="typeInput" class="form-label">Tipo de la Medalla</label>
+        <select formControlName="tipo_de_medalla" class="form-select input-group has-validation" size="3" aria-label="size 3 select example">
+           <option value="oro">Oro</option>
+          <option value="plata">Plata</option>
+          <option value="bronze">Bronze</option>
+        </select>  
+      </div>
+
+      <div class="mb-3">
+        <label for="amountInput" class="form-label">Tipo</label>
+        <div class="input-group has-validation">
+            <select formControlName="id_eventos"  class="form-select" aria-label="Default select example">
+              <option selected>Selecciona el Evento que pertence la medalla</option>
+              <option *ngFor="let evento of eventos" value="{{evento.id}}">{{evento.nombre_evento}}</option>
+            </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Guardar Pais</button>
+    </form>
+  </div>

@@ -1,1 +1,27 @@
-<p>eventos works!</p>
+<div class="container">
+    <div class="d-flex align-items-center justify-content-between flex-wrap mt-5 mb-4 border-bottom">
+      <h2 class="section-title mb-4"> Guardar nuevo Evento </h2>
+      <div class="d-flex gap-2 mb-3">
+        <a class="btn btn-outline-secondary" routerLink="/inicio/lista_paises">Cancelar</a>
+        <button type="button" class="btn btn-primary" (click)="guardarEvento()">Guardar Evento</button>
+      </div>
+    </div>
+    
+    <form class="mb-5" [formGroup]="eventosForm" (ngSubmit)="guardarEvento()">
+      <div class="mb-3">
+        <label for="typeInput" class="form-label">Nomre del Evento</label>
+        <input type="text" formControlName="nombre_evento" class="form-control" id="typeInput" placeholder="Nombren del Evento">
+      </div>
+
+      <div class="mb-3">
+        <label for="amountInput" class="form-label">Region</label>
+        <div class="input-group has-validation">
+          <input type="date" formControlName="fecha_del_evento" class="form-control" id="typeInput" placeholder="Fecha cuando se realiza el evento">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Guardar Evento</button>
+    </form>
+  </div>
+
+<app-footer></app-footer>

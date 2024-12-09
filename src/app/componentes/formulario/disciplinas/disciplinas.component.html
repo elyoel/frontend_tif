@@ -1,1 +1,37 @@
-<p>disciplinas works!</p>
+<div class="container">
+    <div class="d-flex align-items-center justify-content-between flex-wrap mt-5 mb-4 border-bottom">
+      <h2 class="section-title mb-4"> Guardar nuevo Disisciplina </h2>
+      <div class="d-flex gap-2 mb-3">
+        <a class="btn btn-outline-secondary" routerLink="/inicio/lista_paises">Cancelar</a>
+        <button type="button" class="btn btn-primary" (click)="guardarDisciplina()">Guardar Disisciplina</button>
+      </div>
+    </div>
+    
+    <form class="mb-5" [formGroup]="disciplinasForm" (ngSubmit)="guardarDisciplina()">
+        <div class="mb-3">
+            <label for="amountInput" class="form-label">Evento al Que pertenece la Disisciplina</label>
+            <div class="input-group has-validation">
+                <select formControlName="id_eventos" class="form-control">
+                  <option *ngFor="let evento of eventos" value="{{evento.id}}">{{evento.nombre_evento}}</option>
+                </select>  
+            </div>
+        </div>
+
+        <div class="mb-3">
+        <label for="typeInput" class="form-label">Nombre de Disciplinas</label>
+        <input type="text" formControlName="nombre_disciplinas" class="form-control" id="typeInput" placeholder="Nombre">
+      </div>
+
+      <div class="mb-3">
+        <label for="amountInput" class="form-label">Tipo de Disciplinas</label>
+        <div class="input-group has-validation">
+          <input type="text" formControlName="tipo_de_disciplinas" class="form-control" id="amountInput" placeholder="Natación, Corredo, Etc...">
+        </div>
+      </div>
+      
+     
+      
+      <button type="submit" class="btn btn-primary">Guardar Disciplinas</button>
+    </form>
+  </div>
+    

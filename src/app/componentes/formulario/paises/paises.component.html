@@ -1,1 +1,26 @@
-<p>paises works!</p>
+<div class="container">
+  <div class="d-flex align-items-center justify-content-between flex-wrap mt-5 mb-4 border-bottom">
+    <h2 class="section-title mb-4"> Guardar nuevo Pais </h2>
+    <div class="d-flex gap-2 mb-3">
+      <a class="btn btn-outline-secondary" routerLink="/inicio/lista_paises">Cancelar</a>
+      <button type="button" class="btn btn-primary" (click)="guardarPais()">Guardar Pais</button>
+    </div>
+  </div>
+  
+  <form class="mb-5" [formGroup]="paisForm" (ngSubmit)="guardarPais()">
+    <div class="mb-3">
+      <label for="typeInput" class="form-label">Nombre del Pais</label>
+      <input type="text" formControlName="nombre_de_pais" class="form-control" id="typeInput" placeholder="Nombre">
+      
+    </div>
+    <div class="mb-3">
+      <label for="amountInput" class="form-label">Region</label>
+      <div class="input-group has-validation">
+        <input type="text" formControlName="region" class="form-control" id="amountInput" placeholder="Region del pais">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Pais</button>
+  </form>
+</div>
+
+<app-footer></app-footer>
