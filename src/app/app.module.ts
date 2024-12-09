@@ -15,6 +15,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { ListaPaisesComponent } from './componentes/listas/lista-paises/lista-paises.component';
 import { ListaParticipantesComponent } from './componentes/listas/lista-participantes/lista-participantes.component';
 import { MedallasComponent } from './componentes/formulario/medallas/medallas.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MedallasComponent } from './componentes/formulario/medallas/medallas.co
     HomeComponent,
     FooterComponent,
     ListaPaisesComponent,
-    ListaParticipantesComponent
+    ListaParticipantesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

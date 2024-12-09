@@ -1,9 +1,8 @@
 footer{
     bottom: 0;
-    position: fixed;
+    position: relative;
     width: 100%;
 }
-
 a{
     border-radius: 90%;
     
