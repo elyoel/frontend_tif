@@ -12,13 +12,24 @@ import { MedallasComponent } from './componentes/formulario/medallas/medallas.co
 const routes: Routes = [
   {path: 'inicio', component: HomeComponent},
   {path: '', redirectTo: 'inicio', pathMatch: 'full'},
-  {path: 'listas/lista_paises', component: ListaPaisesComponent},
-  {path: 'listas/lista_participantes', component: ListaParticipantesComponent},
-  {path: 'listas/nuevo/pais', component: PaisesComponent},
-  {path: 'listas/nuevo/disciplina', component: DisciplinasComponent},
-  {path: 'listas/nuevo/evento', component: EventosComponent},
-  {path: 'listas/nuevo/participante', component: ParticipantesComponent},
-  {path: 'listas/nuevo/medalla', component: MedallasComponent}
+  {path: 'inicio/lista_paises', component: ListaPaisesComponent},
+  {path: 'inicio/lista_participantes', component: ListaParticipantesComponent},
+  
+  {path: 'nuevo/pais', component: PaisesComponent},
+  {path: 'editar/pais/:id', component: PaisesComponent},
+
+  {path: 'nuevo/disciplina', component: DisciplinasComponent},
+  {path: 'editar/disciplina/:id', component: DisciplinasComponent},
+
+  {path: 'nuevo/evento', component: EventosComponent},
+  {path: 'editar/evento/:id', component: EventosComponent},
+  
+  {path: 'nuevo/participante', component: ParticipantesComponent},
+  {path: 'editar/participante/:id', component: ParticipantesComponent},
+  
+  {path: 'nuevo/medalla', component: MedallasComponent},
+  {path: 'editar/medalla/:id', component: MedallasComponent}
+
 ];
 
 @NgModule({

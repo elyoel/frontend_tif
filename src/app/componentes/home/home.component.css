@@ -1,0 +1,35 @@
+/* Contenedor principal del Home */
+.home-container {
+    padding: 50px;
+    background-color: #0081C8;  /* Azul Olímpico */
+    color: white;               /* Texto en blanco para mejor contraste */
+    min-height: 100vh;          /* Asegura que ocupe toda la pantalla */
+    text-align: center;         /* Centra el contenido dentro del contenedor */
+  }
+  
+  /* Estilo para los botones */
+  a.btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;  /* Suaviza la transición de colores */
+  }
+  
+  /* Estilo para los botones de tipo 'btn-outline-secondary' */
+  a.btn.btn-outline-secondary {
+    border: 2px solid #fff;   /* Borde blanco para el botón */
+  }
+  
+  /* Estilo para los botones de tipo 'btn-outline-light' */
+  a.btn.btn-outline-light {
+    border: 2px solid #fff;   /* Borde blanco para el botón */
+  }
+  
+  /* Efecto al pasar el ratón por encima de los botones */
+  a.btn:hover {
+    background-color: white;  /* Fondo blanco al pasar el ratón */
+    color: #0081C8;            /* Texto azul olímpico */
+  }
+  

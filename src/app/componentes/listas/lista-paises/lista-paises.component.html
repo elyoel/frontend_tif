@@ -1,18 +1,28 @@
-<div class="table-responsive mb-5">
+<div class="container table-responsive mb-5">
+    
+    <a class="btn btn-primary" routerLink="/nuevo/pais">Agregar</a>
+
     <table class="table">
       <thead>
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Nombre</th>
           <th scope="col">Region</th>
+          <th scope="col" class="table-head-action">Opciones</th>
         </tr>
       </thead>
       <tbody>
         <ng-container *ngIf="paises.length; else emptyMessage">
-          <tr *ngFor="let expense of paises">
-            <td>{{ expense.id }}</td>
-            <td>{{ expense.nombre_de_pais }}</td>
-            <td>{{ expense.region }}</td>
+          <tr *ngFor="let pais of paises">
+            <td>{{ pais.id }}</td>
+            <td>{{ pais.nombre_de_pais }}</td>
+            <td>{{ pais.region }}</td>
+            <td class="table-data-action">
+              <div class="d-flex gap-2 mb-3">
+                <a class="btn btn-outline-info" [routerLink]="['/editar/pais', pais.id]">Editar</a>
+                <button type="button" class="btn btn-outline-danger" (click)="eliminarPais(pais.id)">Eliminar</button>
+              </div>  
+            </td>
            </tr>
         </ng-container>
         <ng-template #emptyMessage>
@@ -21,6 +31,9 @@
           </tr>
         </ng-template>
       </tbody>
-    </table>
-  </div>
+    </table>   
+</div>
+
+<app-footer></app-footer>
+
   
