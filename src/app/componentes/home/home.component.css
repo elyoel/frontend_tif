@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+    background-size:center; /* Ajusta la imagen para cubrir todo el área */
     background-position: center; /* Centra la imagen */
 }
 /* Caja principal */

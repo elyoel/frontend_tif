@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-@import "toastify-js/src/toastify.css"
+@import "toastify-js/src/toastify.css";
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+footer{
+    margin-top: auto;
+}

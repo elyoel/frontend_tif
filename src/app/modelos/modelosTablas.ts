@@ -5,7 +5,6 @@ export interface Participantes{
     edad : number;
     id_eventos : number;
     id_pais : number;
-    id_medallas : number;
     id_disciplinas : number;
 };
 export interface Pais{

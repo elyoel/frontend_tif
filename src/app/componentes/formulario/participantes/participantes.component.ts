@@ -30,7 +30,6 @@ export class ParticipantesComponent implements OnInit{
     edad : new FormControl(''),
     id_eventos : new FormControl(''),
     id_pais : new FormControl(''),
-    id_medallas : new FormControl(''),
     id_disciplinas : new FormControl(''),
   });
   participanteId?: number;
